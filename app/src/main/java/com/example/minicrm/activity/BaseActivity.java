@@ -47,7 +47,7 @@ public class BaseActivity extends AppCompatActivity {
         Log.d(TAG, "OnCreate " + savedInstanceState);
         overridePendingTransition(0, 0);
 
-        ApplicationMiniCrm.getInstance().setLocale(this);
+//        ApplicationMiniCrm.getInstance().setLocale(this);
 
         super.onCreate(savedInstanceState);
 
@@ -57,7 +57,7 @@ public class BaseActivity extends AppCompatActivity {
         mFragmentManager = getSupportFragmentManager();
         config = new SharedPref(this);
         mHandler = new Handler();
-        mFontBussiness = ApplicationMiniCrm.getInstance().getFontBussiness();
+//        mFontBussiness = ApplicationMiniCrm.getInstance().getFontBussiness();
         ApplicationMiniCrm.setIsVisible(true);
 
 
