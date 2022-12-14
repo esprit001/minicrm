@@ -2,7 +2,7 @@ package com.example.minicrm.bussiness;
 
 import android.graphics.Typeface;
 
-import com.example.minicrm.app.App;
+import com.example.minicrm.app.ApplicationMiniCrm;
 
 
 public class FontBussiness {
@@ -16,14 +16,14 @@ public class FontBussiness {
 	private Typeface mOpenSanBold;
 	private Typeface mOpenSanRegular;
 	private Typeface mOpenSanSemiBold;
-	private App mIposManage;
+	private ApplicationMiniCrm mIposManage;
 
 	private Typeface mSanfanciscoRegular;
 	private Typeface mSanfanciscoMedium;
 	private Typeface mSanfanciscoSemibold;
 	private Typeface mSanfanciscoBold;
 
-	public FontBussiness(App mIpos) {
+	public FontBussiness(ApplicationMiniCrm mIpos) {
 		this.mIposManage = mIpos;
 		mRobotoMedium = Typeface.createFromAsset(mIpos.getAssets(),
 				"fonts/Roboto-Medium.ttf");
@@ -109,7 +109,7 @@ public class FontBussiness {
 		return mSanfanciscoSemibold;
 	}
 
-	public App getFoodBook() {
+	public ApplicationMiniCrm getFoodBook() {
 		return mIposManage;
 	}
 	

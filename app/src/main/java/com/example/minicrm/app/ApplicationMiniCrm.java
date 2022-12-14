@@ -15,14 +15,13 @@ import com.example.minicrm.util.LanguageUtil;
 import com.example.minicrm.util.SharedPref;
 import com.facebook.stetho.Stetho;
 
-import java.util.ArrayList;
 import java.util.Locale;
 
 
-public class App extends MultiDexApplication {
+public class ApplicationMiniCrm extends MultiDexApplication {
     public static final String TAG = "ApplicationAndroid";
 
-    private static App sInstance;
+    private static ApplicationMiniCrm sInstance;
 
 
     private LocalBroadcastManager localBroadcastManager;
@@ -83,7 +82,7 @@ public class App extends MultiDexApplication {
         return mFontBussiness;
     }
 
-    public static synchronized App getInstance() {
+    public static synchronized ApplicationMiniCrm getInstance() {
         return sInstance;
     }
 

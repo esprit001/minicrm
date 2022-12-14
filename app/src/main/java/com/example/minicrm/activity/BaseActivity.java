@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.minicrm.app.App;
+import com.example.minicrm.app.ApplicationMiniCrm;
 import com.example.minicrm.bussiness.FontBussiness;
 import com.example.minicrm.util.SharedPref;
 import com.example.minicrm.util.Utilities;
@@ -47,7 +47,7 @@ public class BaseActivity extends AppCompatActivity {
         Log.d(TAG, "OnCreate " + savedInstanceState);
         overridePendingTransition(0, 0);
 
-        App.getInstance().setLocale(this);
+        ApplicationMiniCrm.getInstance().setLocale(this);
 
         super.onCreate(savedInstanceState);
 
@@ -57,8 +57,8 @@ public class BaseActivity extends AppCompatActivity {
         mFragmentManager = getSupportFragmentManager();
         config = new SharedPref(this);
         mHandler = new Handler();
-        mFontBussiness = App.getInstance().getFontBussiness();
-        App.setIsVisible(true);
+        mFontBussiness = ApplicationMiniCrm.getInstance().getFontBussiness();
+        ApplicationMiniCrm.setIsVisible(true);
 
 
 
@@ -125,7 +125,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        App.setIsVisible(false);
+        ApplicationMiniCrm.setIsVisible(false);
         Log.d(TAG, "Ondes troy");
     }
 
@@ -152,7 +152,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        App.setIsVisible(true);
+        ApplicationMiniCrm.setIsVisible(true);
 
     }
 
@@ -160,7 +160,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        App.setIsVisible(true);
+        ApplicationMiniCrm.setIsVisible(true);
     }
 
     @Override
